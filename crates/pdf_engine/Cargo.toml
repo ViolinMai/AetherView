@@ -1,0 +1,11 @@
+[package]
+name = "aether-pdf"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+aether-core.workspace = true
+lopdf.workspace = true
+image.workspace = true
+parking_lot.workspace = true
+tracing.workspace = true

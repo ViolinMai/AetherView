@@ -1,0 +1,67 @@
+[workspace]
+resolver = "2"
+members = [
+    "crates/core",
+    "crates/platform",
+    "crates/gpu",
+    "crates/image_engine",
+    "crates/editing",
+    "crates/archive",
+    "crates/pdf_engine",
+    "crates/ocr",
+    "crates/app",
+]
+default-members = ["crates/app"]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2024"
+authors = ["AetherView Engineering"]
+license = "MIT OR Apache-2.0"
+
+[workspace.dependencies]
+anyhow = "1.0"
+thiserror = "2.0"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+toml = "0.8"
+tokio = { version = "1.43", features = ["rt-multi-thread", "macros", "sync", "fs", "time"] }
+tokio-util = "0.7"
+rayon = "1.10"
+directories = "6.0"
+lru = "0.13"
+parking_lot = "0.12"
+sha2 = "0.10"
+image = { version = "0.25", default-features = true, features = ["webp", "tiff", "hdr", "exr", "dds", "qoi", "ico", "tga", "pnm"] }
+resvg = "0.44"
+kamadak-exif = "0.6"
+zip = { version = "2.2", default-features = false, features = ["deflate", "zstd", "bzip2"] }
+lopdf = "0.34"
+unicode-bidi = "0.3"
+rfd = { version = "0.15", default-features = false, features = ["xdg-portal", "tokio"] }
+iced = { version = "0.13", features = ["tokio", "image", "svg", "canvas", "advanced", "wgpu"] }
+wgpu = "23.0"
+
+aether-core = { path = "crates/core" }
+aether-platform = { path = "crates/platform" }
+aether-gpu = { path = "crates/gpu" }
+aether-image = { path = "crates/image_engine" }
+aether-editing = { path = "crates/editing" }
+aether-archive = { path = "crates/archive" }
+aether-pdf = { path = "crates/pdf_engine" }
+aether-ocr = { path = "crates/ocr" }
+
+# Optimize all third-party crates (image decoding, wgpu, compression) even in `cargo run` dev mode!
+[profile.dev]
+opt-level = 2
+
+[profile.dev.package."*"]
+opt-level = 3
+
+[profile.release]
+opt-level = 3
+lto = "thin"
+codegen-units = 1
+strip = "symbols"

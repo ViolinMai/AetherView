@@ -1,0 +1,13 @@
+[package]
+name = "aether-ocr"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+aether-core.workspace = true
+image.workspace = true
+unicode-bidi.workspace = true
+lopdf.workspace = true
+serde.workspace = true
+tokio-util.workspace = true
+tracing.workspace = true

@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=AetherView
+Comment=High-Performance GPU Image, PDF & Document Viewer
+Exec=aetherview %F
+Icon=image-viewer
+Terminal=false
+Type=Application
+Categories=Graphics;Viewer;2DGraphics;RasterGraphics;
+MimeType=image/jpeg;image/png;image/webp;image/gif;image/tiff;image/bmp;image/x-icon;image/x-tga;image/x-portable-pixmap;image/vnd.radiance;image/x-exr;image/svg+xml;application/pdf;application/vnd.comicbook+zip;application/x-cbz;
+StartupNotify=true
+StartupWMClass=aetherview

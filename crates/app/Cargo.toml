@@ -1,0 +1,23 @@
+[package]
+name = "aetherview"
+version.workspace = true
+edition.workspace = true
+
+[[bin]]
+name = "aetherview"
+path = "src/main.rs"
+
+[dependencies]
+aether-core.workspace = true
+aether-platform.workspace = true
+aether-gpu.workspace = true
+aether-image.workspace = true
+aether-editing.workspace = true
+aether-archive.workspace = true
+aether-pdf.workspace = true
+aether-ocr.workspace = true
+iced.workspace = true
+tokio.workspace = true
+tokio-util.workspace = true
+tracing.workspace = true
+tracing-subscriber.workspace = true

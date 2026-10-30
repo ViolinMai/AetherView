@@ -1,0 +1,12 @@
+[package]
+name = "aether-gpu"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+aether-core.workspace = true
+wgpu.workspace = true
+iced.workspace = true
+lru.workspace = true
+parking_lot.workspace = true
+tracing.workspace = true

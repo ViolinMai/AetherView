@@ -1,0 +1,9 @@
+[package]
+name = "aether-editing"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+aether-core.workspace = true
+image.workspace = true
+serde.workspace = true

@@ -1,0 +1,26 @@
+# AetherView — System Requirements & Tool Dependencies (Arch Linux)
+# Install all required native dependencies using pacman:
+
+# Core rendering & Wayland
+# - vulkan-driver (vulkan-radeon, nvidia-utils, or vulkan-intel)
+# - wayland
+# - xdg-desktop-portal
+# - xdg-desktop-portal-hyprland (for Hyprland environments)
+
+# PDF Processing & High-Speed Engines
+# - mupdf-tools (provides `mutool` for ultra-fast C PPM rendering)
+# - poppler (provides `pdftoppm` and `pdfinfo`)
+# - qpdf (structural C++ PDF page manipulation & reordering)
+
+# OCR Engine & Language Models
+# - tesseract (LSTM neural OCR engine)
+# - tesseract-data-ara (Arabic language model)
+# - tesseract-data-eng (English language model)
+
+# Recommended Fonts for Arabic & UI
+# - noto-fonts
+# - noto-fonts-extra
+# - ttf-dejavu
+
+# Single-line installation command:
+# sudo pacman -S --needed mupdf-tools poppler qpdf tesseract tesseract-data-ara tesseract-data-eng noto-fonts noto-fonts-extra ttf-dejavu

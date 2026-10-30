@@ -1,0 +1,15 @@
+[package]
+name = "aether-image"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+aether-core.workspace = true
+image.workspace = true
+resvg.workspace = true
+kamadak-exif.workspace = true
+lru.workspace = true
+parking_lot.workspace = true
+sha2.workspace = true
+rayon.workspace = true
+tracing.workspace = true

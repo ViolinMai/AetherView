@@ -1,0 +1,10 @@
+[package]
+name = "aether-platform"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+aether-core.workspace = true
+rfd.workspace = true
+tracing.workspace = true
+serde.workspace = true

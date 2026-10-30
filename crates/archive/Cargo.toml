@@ -1,0 +1,10 @@
+[package]
+name = "aether-archive"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+aether-core.workspace = true
+aether-image.workspace = true
+zip.workspace = true
+tracing.workspace = true
